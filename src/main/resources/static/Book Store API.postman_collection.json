@@ -1,0 +1,469 @@
+{
+	"info": {
+		"_postman_id": "d0033106-c877-47c1-a46f-7dec92f2fabc",
+		"name": "Book Store API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36417967"
+	},
+	"item": [
+		{
+			"name": "Authentications",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"sam\",\r\n    \"password\":\"hello\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"sam\",\r\n    \"password\":\"hello\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books API",
+			"item": [
+				{
+					"name": "Filter Books",
+					"item": [
+						{
+							"name": "filter Book by author",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYW0iLCJ1c2VybmFtZSI6InNhbSIsImlhdCI6MTc0NDE3NzIzMywiZXhwIjoxNzQ0MjYzNjMzfQ.NgUHIz2bGI1hQ5D7fOPXVKs6quLDTEssobamNiqP3Vw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Updated Book Title\",\r\n    \"author\": \"Updated Author Name\",\r\n    \"category\": \"Updated Category\",\r\n    \"rating\": 4.5,\r\n    \"description\": \"Updated description of the book.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/books/filter/author/Author Name",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"filter",
+										"author",
+										"Author Name"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Filter book by category",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYW0iLCJ1c2VybmFtZSI6InNhbSIsImlhdCI6MTc0NDE3NzIzMywiZXhwIjoxNzQ0MjYzNjMzfQ.NgUHIz2bGI1hQ5D7fOPXVKs6quLDTEssobamNiqP3Vw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Updated Book Title\",\r\n    \"author\": \"Updated Author Name\",\r\n    \"category\": \"Updated Category\",\r\n    \"rating\": 4.5,\r\n    \"description\": \"Updated description of the book.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/books/filter/category/Fiction",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"filter",
+										"category",
+										"Fiction"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Filter book by rating",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYW0iLCJ1c2VybmFtZSI6InNhbSIsImlhdCI6MTc0NDE3NzIzMywiZXhwIjoxNzQ0MjYzNjMzfQ.NgUHIz2bGI1hQ5D7fOPXVKs6quLDTEssobamNiqP3Vw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Updated Book Title\",\r\n    \"author\": \"Updated Author Name\",\r\n    \"category\": \"Updated Category\",\r\n    \"rating\": 4.5,\r\n    \"description\": \"Updated description of the book.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/books/filter/rating/4.5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"filter",
+										"rating",
+										"4.5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CRUD",
+					"item": [
+						{
+							"name": "Create Book",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYW0iLCJ1c2VybmFtZSI6InNhbSIsImlhdCI6MTc0NDE3NzIzMywiZXhwIjoxNzQ0MjYzNjMzfQ.NgUHIz2bGI1hQ5D7fOPXVKs6quLDTEssobamNiqP3Vw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"BookGood\",\r\n    \"author\": \"Author Name\",\r\n    \"category\": \"Fiction\",\r\n    \"price\": 19.99,\r\n    \"rating\": 4.5,\r\n    \"publishedDate\": \"2023-10-01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all Books",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYW0iLCJ1c2VybmFtZSI6InNhbSIsImlhdCI6MTc0NDE3NzIzMywiZXhwIjoxNzQ0MjYzNjMzfQ.NgUHIz2bGI1hQ5D7fOPXVKs6quLDTEssobamNiqP3Vw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Example Book Title\",\r\n    \"author\": \"Author Name\",\r\n    \"category\": \"Fiction\",\r\n    \"price\": 19.99,\r\n    \"rating\": 4.5,\r\n    \"publishedDate\": \"2023-10-01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get book by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYW0iLCJ1c2VybmFtZSI6InNhbSIsImlhdCI6MTc0NDE3NzIzMywiZXhwIjoxNzQ0MjYzNjMzfQ.NgUHIz2bGI1hQ5D7fOPXVKs6quLDTEssobamNiqP3Vw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Example Book Title\",\r\n    \"author\": \"Author Name\",\r\n    \"category\": \"Fiction\",\r\n    \"price\": 19.99,\r\n    \"rating\": 4.5,\r\n    \"publishedDate\": \"2023-10-01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/books/id/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"id",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update book by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYW0iLCJ1c2VybmFtZSI6InNhbSIsImlhdCI6MTc0NDE3NzIzMywiZXhwIjoxNzQ0MjYzNjMzfQ.NgUHIz2bGI1hQ5D7fOPXVKs6quLDTEssobamNiqP3Vw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Updated Book Title\",\r\n    \"author\": \"Updated Author Name\",\r\n    \"category\": \"Updated Category\",\r\n    \"rating\": 4.5,\r\n    \"description\": \"Updated description of the book.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/books/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Book",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYW0iLCJ1c2VybmFtZSI6InNhbSIsImlhdCI6MTc0NDE3NzIzMywiZXhwIjoxNzQ0MjYzNjMzfQ.NgUHIz2bGI1hQ5D7fOPXVKs6quLDTEssobamNiqP3Vw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Updated Book Title\",\r\n    \"author\": \"Updated Author Name\",\r\n    \"category\": \"Updated Category\",\r\n    \"rating\": 4.5,\r\n    \"description\": \"Updated description of the book.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/books/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Search",
+					"item": [
+						{
+							"name": "Search book by title",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYW0iLCJ1c2VybmFtZSI6InNhbSIsImlhdCI6MTc0NDE3NzIzMywiZXhwIjoxNzQ0MjYzNjMzfQ.NgUHIz2bGI1hQ5D7fOPXVKs6quLDTEssobamNiqP3Vw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Updated Book Title\",\r\n    \"author\": \"Updated Author Name\",\r\n    \"category\": \"Updated Category\",\r\n    \"rating\": 4.5,\r\n    \"description\": \"Updated description of the book.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/books/search/title/BookGood",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"search",
+										"title",
+										"BookGood"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

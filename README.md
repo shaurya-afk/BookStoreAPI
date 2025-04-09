@@ -41,3 +41,5 @@ git clone https://github.com/shaurya-afk/BookStoreAPI.git
 3. Ensure PostgreSQL is running and the database is configured in `application.properties`.
 4. Use Postman or any API client to test the endpoints.
 5. You can also test the endpoints using the provided under tests.
+
+> In the static folder is the postman endpoints
