@@ -43,3 +43,14 @@ git clone https://github.com/shaurya-afk/BookStoreAPI.git
 5. You can also test the endpoints using the provided under tests.
 
 > In the static folder is the postman endpoints
+
+## Dockerization
+1. Build the Docker image.
+```bash
+    mvn clean package
+```
+2. Run the Docker container.
+```bash
+    docker build -t book-store-api .
+    docker run -p 8080:8080 book-store-api
+```
